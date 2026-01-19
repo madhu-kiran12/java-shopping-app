@@ -15,7 +15,7 @@ spec:
       containers:
       - name: shopping-container
         image: shopping-app:latest
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
 ---
