@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: shopping-container
-        image: shopping-app:latest
+        image: kiranreddy120895/java-shopping-app:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
