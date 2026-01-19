@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Docker Hub credentials ID stored in Jenkins Credentials
-        DOCKER_CREDENTIALS_ID = 'docker-hub-credentials' 
+        DOCKER_CREDENTIALS_ID = 'dockerhub-credentials' 
         DOCKER_HUB_USERNAME = 'kiranreddy120895'
         IMAGE_NAME = 'java-shopping-app'
         K8S_NAMESPACE = 'default' // Change if needed
