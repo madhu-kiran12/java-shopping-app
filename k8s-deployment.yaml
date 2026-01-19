@@ -24,10 +24,13 @@ kind: Service
 metadata:
   name: shopping-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: shopping-app
   ports:
-    - port: 80          # External port exposed by ELB
-      targetPort: 8080  # Pod container port
+    - protocol: TCP
+      port: 8080         # internal port of your app
+      targetPort: 8080   # container port
+      nodePort: 30007    # external port on EC2 nodes
+
 
