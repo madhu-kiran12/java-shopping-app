@@ -24,13 +24,10 @@ kind: Service
 metadata:
   name: shopping-service
 spec:
-  type: NodePort
-  selector:
-    app: shopping-app
+  type: LoadBalancer
   ports:
-    - protocol: TCP
-      port: 8080         # internal port of your app
-      targetPort: 8080   # container port
-      nodePort: 30007    # external port on EC2 nodes
-
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: shopping
 
